@@ -15,9 +15,9 @@ $headingColor: #333;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Public Sans', sans-serif;
+    background-color: #FFF;
 }
-
 
 a {
     text-decoration: none;
@@ -112,6 +112,9 @@ header {
             color: #FFF;
             margin-bottom: 100px;
             background: linear-gradient(to right, $green,  $blue);
+            &:hover {
+                background: linear-gradient(to right, #55e08f, #5cd4e0);;
+            }
         }
     }
 }
@@ -279,6 +282,9 @@ footer {
             margin: 30px 0;
             text-align: center;
             background: linear-gradient(to right, $green,  $blue);
+            &:hover {
+                background: linear-gradient(to right, #55e08f, #5cd4e0);;
+            }
         }
         .copyright {
             color: $textColor;
@@ -297,7 +303,6 @@ footer {
 //? start media query
 
 @media (min-width: 768px) {
-    
     nav {
         position: relative;
         top: 0;
@@ -319,6 +324,8 @@ footer {
             border-radius: 5px;
             padding: 0 30px;
             box-shadow: none;
+            visibility: visible;
+            opacity: 1;
             li {
                 margin: 0 15px;
                 position: relative;
@@ -355,7 +362,7 @@ footer {
             a {
                 display: block;
                 padding: 15px 30px;
-                width: 165px;
+                width: 166px;
                 border-radius: 25px;
                 font-size: 16px;
                 color: #FFF;
@@ -508,8 +515,6 @@ footer {
             }
         }
     }
-
-
 }
 
 @media (min-width: 992px) {
@@ -535,6 +540,8 @@ footer {
             border-radius: 5px;
             padding: 0 30px;
             box-shadow: none;
+            visibility: visible;
+            opacity: 1;
             li {
                 margin: 0 15px;
                 position: relative;
@@ -571,11 +578,14 @@ footer {
             a {
                 display: block;
                 padding: 15px 30px;
-                width: 165px;
+                width: 166px;
                 border-radius: 25px;
                 font-size: 16px;
                 color: #FFF;
                 background: linear-gradient(to right, $green,  $blue);
+                &:hover {
+                    background: linear-gradient(to right, #55e08f, #5cd4e0);;
+                }
             }
         }
     }
@@ -780,7 +790,7 @@ footer {
             a {
                 display: block;
                 padding: 15px 30px;
-                width: 165px;
+                width: 166px;
                 border-radius: 25px;
                 font-size: 16px;
                 color: #FFF;
@@ -887,7 +897,7 @@ footer {
                 text-align: left;
                 .sec_2_item {
                     width: 450px;
-                    margin: 20px 5px 0;
+                    margin: 20px 3px 0;
                     h3 {
                         padding: 0 30px;
                         margin: 20px 0;
