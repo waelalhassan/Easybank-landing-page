@@ -28,8 +28,7 @@ li {
 }
 
 nav {
-    position: fixed;
-    top: -100%;
+    position: absolute;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -39,7 +38,7 @@ nav {
     box-shadow: 0 4px 10px $shadowColor;
     .menu {
         position: fixed;
-        top: 12%;
+        top: 0;
         left: 50%;
         margin: 0;
         display: grid;
@@ -51,9 +50,14 @@ nav {
         border-radius: 5px;
         padding: 30px 0;
         box-shadow: 0 10px 50px $shadowColor;
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .4s ease;
         li {
             margin: 15px 0;
+            a {
+                color: #333;
+            }
         }
     }
     .hamburger {
@@ -65,6 +69,10 @@ nav {
     }
     .nav-btn {
         display: none;
+    }
+    .close {
+        display: none;
+        cursor: pointer;
     }
 }
 
@@ -715,7 +723,7 @@ footer {
 
 @media (min-width: 1200px) {
     nav {
-        position: relative;
+        position: absolute;
         top: 0;
         display: flex;
         justify-content: space-around;
@@ -724,6 +732,7 @@ footer {
         width: 100%;
         z-index: 99;
         box-shadow: none;
+        transition: all .5s ease;
         .menu {
             position: unset;
             margin: 0;
@@ -781,6 +790,7 @@ footer {
     }
 
     header {
+        margin-top: 80px;
         background-color: $headerColor;
         padding: 0 0 0 70px;
         display: flex;
@@ -901,12 +911,14 @@ footer {
         }
         .footer-menu-1 {
             text-align: left;
+            margin: 0 50px;
         }
         .footer-menu-2 {
             text-align: left;
         }
         .footer-sec-four {
             text-align: center;
+            margin: 0 0 0 auto;
             .footer-btn {
                 display: block;
                 width: 170px;
